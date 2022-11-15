@@ -1,11 +1,10 @@
-import React from "react";
-import "../hoja-de-estilo/navbar.css"
+import "../hoja-de-estilo/navbar.css";
 import CartWidget from "./CartWidget";
 
 const Navbar = () => {
   return (      
     <nav className="navbar">
-      <h1>BRAND</h1>
+         <h1>BRAND</h1>
         <ul className="nav-items">
           <li>
             <a href="." className="active">Inicio</a>
@@ -16,9 +15,10 @@ const Navbar = () => {
           <li>
             <a href=".">Contacto</a>
           </li>
-        </ul>
+        </ul> 
       <CartWidget />
     </nav>
    ); 
-} 
- export default Navbar; 
+}  
+
+export default Navbar;
