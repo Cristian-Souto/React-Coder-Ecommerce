@@ -29,12 +29,11 @@ const ItemListContainer = () => {
       resolve(productos)
     }, 3000)
   )
-  /* productList.then(data => console.log({data})); */
+  
   productList.then(data => setProducts(data))
 
   return (
     <div>
-      {/* <h1>{greeting}</h1> */}
      <ItemList products={products} />
     </div>
   )
