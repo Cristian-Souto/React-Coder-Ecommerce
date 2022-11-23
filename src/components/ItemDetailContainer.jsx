@@ -1,25 +1,15 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 
-//imagen gpu
-import graphicsCard from '../assets/rtx3060.jpg'
-
-const itemMock = [
-  {
-    id: "1",
-    name: "RTX 3060",
-    description: "Placa de video geforce RTX 3060 EVGA",
-    price: 80000,
-    image: graphicsCard
-  }
-]
+//mock
+import {item as itemMock} from '../mocks/item.mock'
 
 const ItemDetailContainer = () => {
 
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    new Promise((resolve) => setTimeout(() => resolve(itemMock), 2000)).then(
+    new Promise((resolve) => setTimeout(() => resolve(itemMock[1]), 2000)).then(
       (data) => setItem(data)
     );
   }, []);

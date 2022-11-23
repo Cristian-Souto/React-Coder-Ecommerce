@@ -1,42 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-//images
-import teclado from '../assets/teclado.jpg';
-import mouse from '../assets/mouse.jpg';
+//mock
+import { item } from '../mocks/item.mock'
+import { useParams } from "react-router-dom";
 
-const productos = [
-  { 
-    id: "1", 
-    name: "Keyboard", 
-    description: "description", 
-    stock: 3,
-    img:teclado
-  },
-  { 
-    id: "2", 
-    name: "Mouse", 
-    description: "description", 
-    stock: 2,
-    img:mouse
-  }
-];
 
 const ItemListContainer = () => {
+  const { category } = useParams();
   const [products, setProducts] = useState([]);
 
-  const productList = new Promise((resolve) =>
-    setTimeout(() => {
-      resolve(productos)
-    }, 3000)
-  )
-  
-  productList.then(data => setProducts(data))
+  useEffect(() => {
+    new Promise((resolve) =>
+      setTimeout(() => {
+        resolve(item);
+      }, 3000)
+    ).then((data) => {
+      if (category) {
+        const categories = data.filter(
+          (producto) => producto.category === category
+        );
+        setProducts(categories)
+      } else {
+        setProducts(data);
+      }
+    });
+  }, [category]);
 
+  if (products.length === 0) {
+    return <p>Loading...</p>
+  }
   return (
     <div>
-     <ItemList products={products} />
+      <ItemList products={products} />
     </div>
   )
-}
+};
 
 export default ItemListContainer;

@@ -1,9 +1,8 @@
-
 const ItemDetail = ({ item }) => {
   return (
     <div>
       <p>{item.name}</p>
-      <img src={item.image} alt="graphics card" />
+      <img src={item.img} alt="" />
     </div>
   )
 }
