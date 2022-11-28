@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
-
+import '../hoja-de-estilo/container-items.css'
+import '../hoja-de-estilo/list-item.css'
 const Item = ({ product }) => {
   return (
-    <div style={{ backgroundColor: '#fff', padding: '2rem' }}>
-      <img src={product.img} alt="keyboard" style={{ width: '150px' }} />
-      <li>{product.name}</li>
-      <li>{product.description}</li>
-      <Link to={`/item/${product.id}`}>
-        <button>Agregar al carrito</button>
-      </Link>
+    <div className="container-items">
+      <div className="list-item">
+        <img src={product.img} alt="keyboard" style={{ width: '150px' }} />
+        <li>{product.name}</li>
+        <li>{product.description}</li>
+        {/*<Link to={`/item/${product.id}`}>
+        <button>Detalle</button>
+      </Link> */}
+        <p>Stock: {product.stock}</p>
+        <span style={{ fontWeight: '700' }}>${product.price}</span>
+      </div>
     </div>
   )
 }

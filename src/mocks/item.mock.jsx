@@ -1,19 +1,30 @@
 //images
 import teclado from '../assets/teclado.jpg';
+import teclado_rgb from '../assets/teclado-rgb.jpg'
+import teclado_rgb_corsair from '../assets/teclado-rgb-corsair.jpg'
 import mouse from '../assets/mouse.jpg';
 
 export const item = [
   { 
     id: "1", 
-    name: "Keyboard", 
+    name: "CheckPoint KX200", 
     category: "keyboard",
-    description: "Descripcion keyboard", 
+    description: "Teclado Gamer Checkpoint KX200 Rgb", 
     stock: 3,
-    price:5000,
-    img:teclado
+    price:4500,
+    img:teclado_rgb
+  },
+  {
+    id: "2", 
+    name: "Corsair", 
+    category: "keyboard",
+    description: "Teclado Gamer Corsair K65 Rgb Mini 60 Cherry Mx", 
+    stock: 3,
+    price:25000,
+    img:teclado_rgb_corsair
   },
   { 
-    id: "2", 
+    id: "3", 
     name: "Mouse", 
     category: "mouse",
     description: "Descripcion mouse", 
@@ -22,7 +33,7 @@ export const item = [
     img:mouse
   },
   { 
-    id: "3", 
+    id: "4", 
     name: "Mouse", 
     category: "mouse",
     description: "Descripcion mouse logitech", 
