@@ -41,4 +41,6 @@
 li{
  list-style: none;
  font-weight: 600;
+ margin-bottom: 5px;
+ font-size: 1.2rem;
 }

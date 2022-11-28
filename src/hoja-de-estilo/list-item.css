@@ -1,6 +1,7 @@
 .list-item{
-  width:50%;
+  width:100%;
   padding: 1rem;
   background-color: #f3f4f5;
-  text-align: center;
+  margin: auto;
+  border: 1px solid red;
 }
