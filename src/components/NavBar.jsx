@@ -16,10 +16,10 @@ const Navbar = () => {
           <Link to="/category/keyboard">Teclados</Link>
         </li>
         <li>
-          <Link to="/item/mouse">Mouses</Link>
+          <Link to="/category/mouse">Mouses</Link>
         </li>
         <li>
-          <Link to="/item/placas">Placas de video</Link>
+          <Link to="/category/placas">Placas de video</Link>
         </li>
       </ul>
       <CartWidget />

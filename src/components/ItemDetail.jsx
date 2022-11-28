@@ -1,8 +1,9 @@
 const ItemDetail = ({ item }) => {
   return (
     <div>
-      <p>{item.name}</p>
       <img src={item.img} alt="" />
+      <p>{item.name}</p>
+      <span>$ {item.price}</span>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Item from "../components/Item"; */
 import ItemListContainer from "../components/ItemListContainer";
 
 const CategoryView = () => {
-  const {category} = useParams();
+  /* const {category} = useParams(); */
   /* const categories = item.filter(producto => producto.category===category)  */
  
  return(

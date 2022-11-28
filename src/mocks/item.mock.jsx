@@ -6,7 +6,7 @@ export const item = [
   { 
     id: "1", 
     name: "Keyboard", 
-    category: "Keyboard",
+    category: "keyboard",
     description: "Descripcion keyboard", 
     stock: 3,
     price:5000,
