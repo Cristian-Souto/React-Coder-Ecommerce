@@ -5,6 +5,20 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './router/index'
 import reportWebVitals from './reportWebVitals';
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC5E1rXTOYTKS5xOWaTZ6kiTXJEI8rydVA",
+  authDomain: "ecommerce-4fb2d.firebaseapp.com",
+  projectId: "ecommerce-4fb2d",
+  storageBucket: "ecommerce-4fb2d.appspot.com",
+  messagingSenderId: "95463840331",
+  appId: "1:95463840331:web:136aaca565ba3f4fa08bce"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -12,7 +26,5 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
