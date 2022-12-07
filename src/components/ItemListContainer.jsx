@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 //mock
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -11,12 +17,31 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const db = getFirestore();
-    const itemRef = doc(db, "items", "MiokEevqXzLowkK2Bxzr");
+    //PARA CONSULTAR UN SOLO PRODUCTO
+    /*const itemRef = doc(db, "items", "MiokEevqXzLowkK2Bxzr");
     getDoc(itemRef).then((snapshot) => {
       if (snapshot.exists()) {
-        /* console.log({ id:"MiokEevqXzLowkK2Bxzr", ...snapshot.data() }); */
-        setProducts([{id:"MiokEevqXzLowkK2Bxzr", ...snapshot.data()}])
+        console.log({ id: "MiokEevqXzLowkK2Bxzr", ...snapshot.data() });
+        setProducts([{ id: "MiokEevqXzLowkK2Bxzr", ...snapshot.data() }]);
       }
+    }); */
+    //CONSULTAR TODOS LOS PRODUCTOS SIN FILTROS
+    const productsCollection = collection(db, "items");
+    /*getDocs(productsCollection).then((snapshot) => {
+      const products = snapshot.docs.map((doc)=>({
+        id:doc.id,
+        ...doc.data()
+      }))
+      setProducts(products);
+    }) */
+    //PARA TODOS LOS PRODUCTOS CON FILTROS
+    const q = query(productsCollection, where("category", "==", "mouse"));
+    getDocs(q).then((snapshot) => {
+      const products = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProducts(products);
     });
   }, []);
 
