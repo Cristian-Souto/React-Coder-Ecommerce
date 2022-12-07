@@ -25,15 +25,16 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    <div className="item-detail">
-      <img src={item.img} alt={item.name} />
-      <p>{item.name}</p>
+    <div className="item-detail" style={{backgroundColor:'beige', height:'100vh'}}>
+      <img style={{ width: '20%',objectFit:'contain' }} src={item.img} alt={item.name} />
+      <h2>{item.name}</h2>
       <p>{item.description}</p>
+      <span style={{ fontSize: '12px', marginBottom: '5px' }}>Stock: {item.stock}</span>
       <div>
         {currentStock > 0 ? (
           <ItemCount count={count} handleCount={handleCount} />
         ) : (
-          <span>Sin stock</span>
+          <span style={{color:'red', fontWeight:'600'}}>Sin stock</span>
         )}
       </div>
       <button

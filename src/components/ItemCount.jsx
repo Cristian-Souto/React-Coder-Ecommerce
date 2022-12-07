@@ -4,7 +4,7 @@ export const ItemCount = ({ count, handleCount }) => {
       <button
         onClick={() => handleCount("minus")}
       >
-        Eliminar producto
+        -
       </button>
       <span
         id="counter"
@@ -14,7 +14,7 @@ export const ItemCount = ({ count, handleCount }) => {
       <button
         onClick={() => handleCount("plus")}
       >
-        Agregar Producto
+        + add
       </button>
     </div>
   )
