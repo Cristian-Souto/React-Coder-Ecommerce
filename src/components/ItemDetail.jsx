@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { ItemCount } from "./ItemCount";
+import { CartContext } from "../context/cartContext";
 
 const ItemDetail = ({ item }) => {
+  const { addItem, isInCart } = useContext(CartContext);
   const navigate = useNavigate();
   const [count, setCount] = useState(1);
   const [currentStock, setCurrentStock] = useState(item.stock);

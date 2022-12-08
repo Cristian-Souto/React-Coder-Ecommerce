@@ -1,13 +1,16 @@
 import './App.css';
-/* import ItemDetailContainer from './components/ItemDetailContainer'; */
 import { Layout } from './components/Layout';
 import ItemListContainer from './components/ItemListContainer';
+import { CartContext } from './context/cartContext'
+
 
 function App() {
   return (
-    <Layout>
-      <ItemListContainer />
-    </Layout>
+    
+      <Layout>
+        <ItemListContainer />
+      </Layout>
+   
   );
 }
 

@@ -6,6 +6,7 @@ import { router } from './router/index'
 import reportWebVitals from './reportWebVitals';
 
 import { initializeApp } from "firebase/app";
+import { CartContextProvider } from './context/cartContext';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5E1rXTOYTKS5xOWaTZ6kiTXJEI8rydVA",
@@ -22,7 +23,9 @@ initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   </React.StrictMode>
 );
 
