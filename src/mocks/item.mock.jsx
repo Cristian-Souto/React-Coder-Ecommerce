@@ -19,7 +19,7 @@ export const item = [
     name: "Corsair", 
     category: "keyboard",
     description: "Teclado Gamer Corsair K65 Rgb Mini 60 Cherry Mx", 
-    stock: 3,
+    stock: 10,
     price:25000,
     img:teclado_rgb_corsair
   },
