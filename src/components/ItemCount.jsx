@@ -1,6 +1,8 @@
+import '../hoja-de-estilo/itemCountContainer.css'
+
 export const ItemCount = ({ count, handleCount }) => {
   return (
-    <div>
+    <div className="itemCountContainer">
       <button
         onClick={() => handleCount("minus")}
       >
@@ -11,10 +13,10 @@ export const ItemCount = ({ count, handleCount }) => {
       >
         {count}
       </span>
-      <button
+      <button 
         onClick={() => handleCount("plus")}
       >
-        + 
+        +
       </button>
     </div>
   )

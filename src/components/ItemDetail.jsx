@@ -17,7 +17,6 @@ const ItemDetail = ({ item }) => {
     if (type === "minus" && count > 1) setCount(count - 1);
   }
 
-
   function handleAdd() {
     if (currentStock < count) alert("No hay suficiente stock de este producto");
     else {
@@ -31,12 +30,12 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    <div className="item-detail" style={{ backgroundColor: 'beige', height: '100vh' }}>
+    <div className="itemDetailContainer">
       <img style={{ width: '20%', objectFit: 'contain' }} src={item.img} alt={item.name} />
       <h2>{item.name}</h2>
       <p>{item.description}</p>
       <span style={{ fontSize: '12px', marginBottom: '5px' }}>Stock: {item.stock}</span>
-      <div style={{backgroundColor:'black'}}>
+      <div>
         {currentStock > 0 ? (
           <ItemCount count={count} handleCount={handleCount} />
         ) : (
@@ -52,7 +51,7 @@ const ItemDetail = ({ item }) => {
       >
         Finalizar Compra
       </button>
-      <span>$ {item.price}</span>
+      <span style={{fontWeight:'600'}}>$ {item.price}</span>
     </div>
   )
 }

@@ -1,0 +1,10 @@
+.itemCountContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategrey;
+}
+.itemCountContainer > button{
+  padding: 1rem 1.3rem;
+  font-size: 1.2rem;
+}

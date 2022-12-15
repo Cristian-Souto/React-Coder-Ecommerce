@@ -1,7 +1,7 @@
 /* import { Link } from "react-router-dom"; */
 import { useNavigate } from "react-router-dom";
 import '../hoja-de-estilo/container-items.css'
-import '../hoja-de-estilo/list-item.css'
+/* import '../hoja-de-estilo/list-item.css' */
 
 
 const Item = ({ product }) => {
