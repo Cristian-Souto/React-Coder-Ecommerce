@@ -6,7 +6,7 @@
   padding: 1rem 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
   height: 70px;
-  /* border: 1px solid red; */
+  margin-bottom: 2rem;
 }
 .nav-items{
   display: flex;
@@ -29,7 +29,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   color: #cecece;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 1.3px;
   transition: all 1s ease;
 }
@@ -40,7 +40,7 @@
 }
 li{
  list-style: none;
- font-weight: 600;
- margin-bottom: 5px;
- font-size: 1.2rem;
+ font-weight: 400;
+ margin:10px 0;
+ font-size: 1rem;
 }

@@ -1,31 +1,37 @@
 .container-items {
-  background-color: #fff;
-  /* border: 2px solid blueviolet; */
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 35%;
   height: 400px;
   margin-bottom: 10px;
   text-align: center;
   border-radius: 10px;
 }
 
-.btnDetalle {
-  padding: 1rem 1.2rem;
+.btnDetail {
+  padding: .6rem .8rem;
   background-color: darkslateblue;
   margin: 10px 0;
-  color: aliceblue;
+  color: white;
   font-size: .9rem;
 }
 
 .stockParagrahp {
-  font-size: 14px;
+  font-size: 10px;
   color: #000;
-  margin: 10px 0;
+  margin: auto;
+  background-color: darkslateblue;
+  padding: .4rem .5rem;
+  border-radius: 4px;
+  width: fit-content;
+  text-align: center;
+  color: white;
+  
 }
 
 .productInfo {
@@ -33,6 +39,7 @@
 }
 
 .productPrice {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
+  margin: 14px 0;
 }

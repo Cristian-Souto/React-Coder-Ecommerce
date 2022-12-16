@@ -1,8 +1,54 @@
 .itemDetailContainer{
-  background-color:#f3f4f5;
+  background-color:#fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0 auto 0;
+  width: 50%;
+  padding:1.5rem 1rem;
+  border-radius: 1rem;
+}
+.btnAddItem{
+  background-color:slateblue;
+  color: white;
+  margin:0 1rem; 
+}
+.btnCheckOut{
+  background-color: seagreen;
+  color: white;
+}
+.btnContainer{
+  text-align: center;
+  padding: 1rem;
+}
+.itemPrice{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.item{
+  margin: .4rem 0;
+  width: 50%;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+.itemStock{
+  font-size: 14px;
+  margin: 10px 0;
+}
+.itemDescription{
+  font-style:italic;
+  font-size: 1.3rem;
+}
+.detailItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+.imageItem{
+  text-align: center;
 }

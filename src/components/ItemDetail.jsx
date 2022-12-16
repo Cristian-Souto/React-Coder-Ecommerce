@@ -31,10 +31,14 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="itemDetailContainer">
-      <img style={{ width: '20%', objectFit: 'contain' }} src={item.img} alt={item.name} />
-      <h2>{item.name}</h2>
-      <p>{item.description}</p>
-      <span style={{ fontSize: '12px', marginBottom: '5px' }}>Stock:{item.stock}</span>
+      <div className="imageItem">
+        <img style={{ width: '50%', objectFit: 'cover' }} src={item.img} alt={item.name} />
+      </div>
+      <div className="detailItems">
+        <h2 className="item">{item.name}</h2>
+        <p className="item itemDescription">{item.description}</p>
+        <span className="itemStock">Stock:{item.stock}</span>
+      </div>
       <div>
         {currentStock > 0 ? (
           <ItemCount count={count} handleCount={handleCount} />
@@ -42,16 +46,18 @@ const ItemDetail = ({ item }) => {
           <span style={{ color: 'red', fontWeight: '600' }}>Sin stock</span>
         )}
       </div>
-      <button
-        onClick={handleAdd}
-      >Agregar al carrito
-      </button>
-      <button
-        onClick={handleCheckout}
-      >
-        Finalizar Compra
-      </button>
-      <span style={{fontWeight:'600'}}>$ {item.price}</span>
+      <div className="btnContainer">
+        <button className="btnAddItem"
+          onClick={handleAdd}
+        >Agregar al carrito
+        </button>
+        <button className="btnCheckOut"
+          onClick={handleCheckout}
+        >
+          Finalizar Compra
+        </button>
+      </div>
+      <span className="itemPrice">$ {item.price}</span>
     </div>
   )
 }

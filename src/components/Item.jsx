@@ -18,7 +18,7 @@ const Item = ({ product }) => {
       <div>
         <li>{product.name}</li>
         <li>{product.description}</li>
-        <button onClick={handleNavigate} className="btnDetalle">Detalle</button>
+        <button onClick={handleNavigate} className="btnDetail">Detalle</button>
         {/*  </Link>} */}
         <p className="stockParagrahp">Stock: {product.stock}</p>
         <p className="productPrice"> ${product.price}</p>

@@ -18,9 +18,6 @@ const Navbar = () => {
         <li>
           <Link to="/category/mouse">Mouses</Link>
         </li>
-        <li>
-          <Link to="/category/placas">Placas de video</Link>
-        </li>
       </ul>
       <CartWidget />
     </nav>
