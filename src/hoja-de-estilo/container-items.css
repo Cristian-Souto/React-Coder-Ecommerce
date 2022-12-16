@@ -1,12 +1,38 @@
-.container-items{
-  background-color:lightgrey;
-  padding: 1rem 1.5rem; 
-  display:flex;
+.container-items {
+  background-color: #fff;
+  /* border: 2px solid blueviolet; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  width: 400px;
-  margin: auto;
+  width: 40%;
+  height: 400px;
+  margin-bottom: 10px;
   text-align: center;
+  border-radius: 10px;
+}
+
+.btnDetalle {
+  padding: 1rem 1.2rem;
+  background-color: darkslateblue;
+  margin: 10px 0;
+  color: aliceblue;
+  font-size: .9rem;
+}
+
+.stockParagrahp {
+  font-size: 14px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.productInfo {
+  gap: .6rem;
+}
+
+.productPrice {
+  font-size: 12px;
+  font-weight: 600;
 }

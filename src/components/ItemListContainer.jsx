@@ -9,7 +9,6 @@ import {
   where,
 } from "firebase/firestore";
 
-
 const ItemListContainer = () => {
   const { category } = useParams();
   console.log({ category });

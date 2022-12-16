@@ -1,8 +1,6 @@
 /* import { Link } from "react-router-dom"; */
 import { useNavigate } from "react-router-dom";
 import '../hoja-de-estilo/container-items.css'
-/* import '../hoja-de-estilo/list-item.css' */
-
 
 const Item = ({ product }) => {
   const navigate = useNavigate();
@@ -13,14 +11,18 @@ const Item = ({ product }) => {
 
   return (
     <div className="container-items">
-      <img src={product.img} alt="" style={{ width: '150px' }} />
-      <li>{product.name}</li>
-      <li>{product.description}</li>
+      <div>
+        <img src={product.img} alt="" style={{ width: '150px' }} />
+      </div>
       {/* {<Link to={`/item/${product.id}`}> */}
-        <button onClick={handleNavigate}>Detalle</button>
-     {/*  </Link>} */}
-      <p style={{ fontSize: '12px', marginBottom: '5px' }}>Stock: {product.stock}</p>
-      <span style={{ fontWeight: '700' }}>${product.price}</span>
+      <div>
+        <li>{product.name}</li>
+        <li>{product.description}</li>
+        <button onClick={handleNavigate} className="btnDetalle">Detalle</button>
+        {/*  </Link>} */}
+        <p className="stockParagrahp">Stock: {product.stock}</p>
+        <p className="productPrice"> ${product.price}</p>
+      </div>
     </div>
   )
 }

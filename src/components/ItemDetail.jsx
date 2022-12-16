@@ -34,7 +34,7 @@ const ItemDetail = ({ item }) => {
       <img style={{ width: '20%', objectFit: 'contain' }} src={item.img} alt={item.name} />
       <h2>{item.name}</h2>
       <p>{item.description}</p>
-      <span style={{ fontSize: '12px', marginBottom: '5px' }}>Stock: {item.stock}</span>
+      <span style={{ fontSize: '12px', marginBottom: '5px' }}>Stock:{item.stock}</span>
       <div>
         {currentStock > 0 ? (
           <ItemCount count={count} handleCount={handleCount} />
