@@ -76,30 +76,34 @@ const CheckoutView = () => {
 
   return (
     <Layout>
-      <form onSubmit={handleFinalizePurchase} className="flex flex-col w-1/2">
-        <div className="flex flex-col">
+      <form onSubmit={handleFinalizePurchase} style={{backgroundColor:'#DBD8E3',borderRadius:'8px',boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px',margin:'auto',maxWidth:'50%',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',height:'80vh'}} >
+        <div style={{display:'flex',flexDirection:'column'}}>
           <input
+            style={{height:'40px',width:'100%',borderRadius:'8px',border:'none',margin:'1rem 0',padding:'0 .5rem'}}
             className="h-8 pl-4 mb-4 rounded-md"
             placeholder="Nombre Completo"
             required
           />
           <input
+            style={{height:'40px',borderRadius:'8px',border:'none',margin:'1rem 0',padding:'0 .5rem'}}
             className="h-8 pl-4 mb-4 rounded-md"
             placeholder="Numero de Telefono"
             type="number"
             required
           />
           <input
+           style={{height:'40px',borderRadius:'8px',border:'none',margin:'1rem 0',padding:'0 .5rem'}}
             className="h-8 pl-4 mb-4 rounded-md"
             placeholder="Email"
             type={"email"}
             required
           />
         </div>
-        <span>
+        <span style={{fontSize:'1.3rem',margin:'2rem'}}>
           Total a pagar: <strong>${totalAmount}</strong>
         </span>
         <button
+         style={{width:'40%',color:'white',fontWeight:'600',borderRadius:'6px',cursor:'pointer',border:'none',padding:'1rem 2rem',backgroundColor:'seagreen'}}
           type="submit"
           className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50"
           disabled={isLoading}
