@@ -1,12 +1,18 @@
+.cardButton{
+  border: none;
+  cursor: pointer;
+  padding: .6rem;
+  border-radius:50%;
+  background-color:#f3f4f5;
+}
 button{
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  background-color:#f3f4f5;
 }
 button:hover{
-  opacity:.7;
+  opacity:.8;
 }
 img{
   width:30px;

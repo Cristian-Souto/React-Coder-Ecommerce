@@ -16,6 +16,9 @@
   color: white;
   margin:0 1rem; 
 }
+.disabled{
+  opacity: .7;
+}
 .btnCheckOut{
   background-color: seagreen;
   color: white;
@@ -30,7 +33,7 @@
 }
 .item{
   margin: .4rem 0;
-  width: 50%;
+  width: 100%;
   text-align: center;
   /* border: 1px solid red; */
 }

@@ -7,9 +7,10 @@ import "../hoja-de-estilo/cartWidget.css";
 const CartWidget = () => {
   const { productsAdded } = useContext(CartContext);
   const count = productsAdded.length;
+  
   return (
     <Link to="/cart">
-      <button>
+      <button className="cardButton">
         <img src={carro} alt="" />
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"

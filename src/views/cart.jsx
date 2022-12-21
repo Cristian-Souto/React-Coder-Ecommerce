@@ -3,7 +3,7 @@ import { Layout } from "../components/Layout";
 const CartView = () =>{
   return(
     <Layout>
-      <h1>vista carrito</h1>
+      <h1>Carrito de compras</h1>
     </Layout>
   )
 }

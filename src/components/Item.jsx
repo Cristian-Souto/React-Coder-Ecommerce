@@ -12,7 +12,7 @@ const Item = ({ product }) => {
   return (
     <div className="container-items">
       <div>
-        <img src={product.img} alt="" style={{ width: '150px' }} />
+        <img src={product.img} alt="" style={{ width:'50%' }} />
       </div>
       {/* {<Link to={`/item/${product.id}`}> */}
       <div>
