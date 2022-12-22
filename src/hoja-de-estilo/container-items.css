@@ -33,11 +33,9 @@
   color: white;
   
 }
-
 .productInfo {
-  gap: .6rem;
+  gap: .4rem;
 }
-
 .productPrice {
   font-size: 16px;
   font-weight: 600;

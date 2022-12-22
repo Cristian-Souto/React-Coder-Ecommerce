@@ -1,8 +1,7 @@
-/* import { Link } from "react-router-dom"; */
 import { useNavigate } from "react-router-dom";
 import '../hoja-de-estilo/container-items.css'
 
-const Item = ({ product }) => {
+const Item = ({ product, quantityAdded }) => {
   const navigate = useNavigate();
 
   function handleNavigate() {
@@ -12,7 +11,7 @@ const Item = ({ product }) => {
   return (
     <div className="container-items">
       <div>
-        <img src={product.img} alt="" style={{ width:'50%' }} />
+        <img src={product.img} alt="" style={{ width:'55%' }} />
       </div>
       {/* {<Link to={`/item/${product.id}`}> */}
       <div>

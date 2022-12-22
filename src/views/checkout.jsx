@@ -15,7 +15,7 @@ import {
 const CheckoutView = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [updatingProducts, setUpdatingProducts] = useState(false);
-  const { productsAdded: items, clear, totalAmount } = useContext(CartContext);
+  const { productsAdded: items, clear, importeTotal } = useContext(CartContext);
   const navigate = useNavigate();
 
   const getTotalByProduct = (quantity, price) => {
@@ -77,6 +77,7 @@ const CheckoutView = () => {
   return (
     <Layout>
       <form onSubmit={handleFinalizePurchase} style={{backgroundColor:'#DBD8E3',borderRadius:'8px',boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px',margin:'auto',maxWidth:'50%',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',height:'80vh'}} >
+        <h2 style={{margin:'1rem 0',fontSize:'2.2rem'}}>Formulario de compra</h2>
         <div style={{display:'flex',flexDirection:'column'}}>
           <input
             style={{height:'40px',width:'100%',borderRadius:'8px',border:'none',margin:'1rem 0',padding:'0 .5rem'}}
@@ -100,10 +101,10 @@ const CheckoutView = () => {
           />
         </div>
         <span style={{fontSize:'1.3rem',margin:'2rem'}}>
-          Total a pagar: <strong>${totalAmount}</strong>
+          Total a pagar: <strong>${importeTotal}</strong>
         </span>
         <button
-         style={{width:'40%',color:'white',fontWeight:'600',borderRadius:'6px',cursor:'pointer',border:'none',padding:'1rem 2rem',backgroundColor:'seagreen'}}
+         style={{width:'40%',fontSize:'1rem',color:'white',fontWeight:'600',borderRadius:'6px',cursor:'pointer',border:'none',padding:'1rem 2rem',backgroundColor:'seagreen'}}
           type="submit"
           className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50"
           disabled={isLoading}

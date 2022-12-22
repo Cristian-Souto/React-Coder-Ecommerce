@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
   margin: 0 auto 0;
   width: 50%;
   padding:1.5rem 1rem;
@@ -14,7 +14,11 @@
 .btnAddItem{
   background-color:slateblue;
   color: white;
-  margin:0 1rem; 
+  margin: 0 .4rem 0 0;
+  width: 100%;
+  gap: 1px;
+  padding: 1rem 0;
+  font-weight: 600;
 }
 .disabled{
   opacity: .7;
@@ -22,14 +26,20 @@
 .btnCheckOut{
   background-color: seagreen;
   color: white;
+  width: 100%;
+  padding: 1rem 0;
+  font-weight: 600;
 }
 .btnContainer{
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  display:flex;
 }
 .itemPrice{
   font-weight: 600;
   font-size: 1.2rem;
+  margin: 0 0 .5rem 0;
 }
 .item{
   margin: .4rem 0;

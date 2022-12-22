@@ -49,14 +49,14 @@ const ItemDetail = ({ item }) => {
       <div className="detailItems">
         <h2 className="item">{item.name}</h2>
         <p className="item itemDescription">{item.description}</p>
-        <span className="itemStock">Stock:{item.stock}</span>
-
+        <span className="itemStock">Stock: {item.stock}</span>
+        <span className="itemPrice">$ {item.price}</span>
       </div>
       <div style={{ width: '100%' }}>
         {currentStock > 0 ? (
           <ItemCount count={count} handleCount={handleCount} />
         ) : (
-          <p style={{ color: 'red', fontWeight: '600', textAlign: 'center' }}>Sin stock</p>
+          <p style={{color: 'red', fontWeight: '600', textAlign: 'center'}}>Sin stock</p>
         )}
       </div>
       <div className="btnContainer">
@@ -72,7 +72,6 @@ const ItemDetail = ({ item }) => {
           Finalizar Compra
         </button>
       </div>
-      <span className="itemPrice">$ {item.price}</span>
     </div>
   )
 }
