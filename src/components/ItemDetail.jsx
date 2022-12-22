@@ -66,7 +66,7 @@ const ItemDetail = ({ item }) => {
         >Agregar al carrito
         </button>
         <button className="btnCheckOut"
-          disabled={!isInCart(item.id)}
+          /* disabled={!isInCart(item.id)} */
           onClick={handleCheckout}
         >
           Finalizar Compra

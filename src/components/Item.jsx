@@ -11,7 +11,7 @@ const Item = ({ product, quantityAdded }) => {
   return (
     <div className="container-items">
       <div>
-        <img src={product.img} alt="" style={{ width:'55%' }} />
+        <img src={product.img} alt="" style={{ width:'40%'}} />
       </div>
       {/* {<Link to={`/item/${product.id}`}> */}
       <div>
