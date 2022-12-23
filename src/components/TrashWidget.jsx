@@ -6,7 +6,7 @@ export const TrashWidget = ({ itemId }) => {
   return (
     <button
       onClick={() => removeItem(itemId)}
-      style={{ position:'absolute', justifyContent: 'center', alignItems: 'center', background: 'lightGrey', borderRadius: '50%', left: '30%', top: '10%', right: '63%' }}
+      style={{ position:'absolute', justifyContent: 'center', alignItems: 'center', background: 'lightGrey', borderRadius: '50%', left: '30%', top: '10%', right: '60%' }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

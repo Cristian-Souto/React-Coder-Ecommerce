@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useGetItemImg } from "../hook/useGetItemImg";
 import { ItemCount } from "./ItemCount";
 import { CartContext } from "../context/cartContext";
 
@@ -8,7 +9,7 @@ const ItemDetail = ({ item }) => {
   const navigate = useNavigate();
   /*Estado para el componente itemCount*/
   const [count, setCount] = useState(1);
-
+  const image = useGetItemImg(item.img);
   console.log("useState inicial del count es: ", count)
   /*useState se actualiza cuando agrego o quito productos del componente itemCount. 
   modifico la cantidad de stock cuando presiono el boton de agregar al carrito 
@@ -44,7 +45,7 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="itemDetailContainer">
       <div className="imageItem">
-        <img style={{ width: '50%', objectFit: 'contain' }} src={item.img} alt={item.name} />
+        <img style={{ width: '50%', objectFit: 'contain' }} src={image} alt={item.name} />
       </div>
       <div className="detailItems">
         <h2 className="item">{item.name}</h2>

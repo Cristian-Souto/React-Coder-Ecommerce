@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import '../hoja-de-estilo/container-items.css'
+import { useGetItemImg } from "../hook/useGetItemImg";
 
 const Item = ({ product, quantityAdded }) => {
   const navigate = useNavigate();
+  const image = useGetItemImg(product.img)
 
   function handleNavigate() {
     navigate(`/item/${product.id}`);
@@ -11,7 +13,7 @@ const Item = ({ product, quantityAdded }) => {
   return (
     <div className="container-items">
       <div>
-        <img src={product.img} alt="" style={{ width:'40%'}} />
+        <img src={image} alt="" style={{ width:'40%'}} />
       </div>
       {/* {<Link to={`/item/${product.id}`}> */}
       <div>
