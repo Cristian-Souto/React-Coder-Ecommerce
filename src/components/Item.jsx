@@ -12,11 +12,11 @@ const Item = ({ product, quantityAdded }) => {
 
   return (
     <div className="container-items">
-      <div>
-        <img src={image} alt="" style={{ width:'40%'}} />
+      <div style={{width:'100%'}}>
+        <img src={image} alt="" style={{ width:'50%'}} />
       </div>
       {/* {<Link to={`/item/${product.id}`}> */}
-      <div>
+      <div style={{padding:'1rem'}}>
         <li>{product.name}</li>
         <li>{product.description}</li>
         <button onClick={handleNavigate} className="btnDetail">Detalle</button>
