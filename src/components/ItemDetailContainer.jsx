@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loading from "./Loading";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { getDoc, getFirestore, doc } from "firebase/firestore";
@@ -19,7 +20,7 @@ const ItemDetailContainer = () => {
   },[id])
   
   if (!item) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return <ItemDetail item={item} />;

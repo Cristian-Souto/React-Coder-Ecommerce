@@ -2,9 +2,9 @@ import Navbar from "./NavBar";
 
 export const Layout = ({children})=>{
   return(
-    <div>
+    <main className="flex flex-col h-screen bg-slate-200">
       <Navbar />
-      {children}
-    </div>
+      <section className="pt-10 flex justify-center">{children}</section>
+    </main>
   )
 }

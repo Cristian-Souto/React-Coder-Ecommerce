@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 import '../hoja-de-estilo/container-items.css'
 import { useGetItemImg } from "../hook/useGetItemImg";
 
@@ -9,23 +10,43 @@ const Item = ({ product, quantityAdded }) => {
   function handleNavigate() {
     navigate(`/item/${product.id}`);
   }
-
+  if (!image) {
+    return <Loading />
+  }
   return (
-    <div className="container-items">
-      <div style={{width:'100%'}}>
-        <img src={image} alt="" style={{ width:'50%'}} />
+    <div
+      onClick={handleNavigate}
+      className="flex flex-col w-[200px] h-[400px] bg-white rounded p-4 shadow cursor-pointer transition-all hover:shadow-lg"
+    >
+      <div className="flex flex-col flex-1">
+        <img
+          src={image}
+          className="w-full h-[100%] object-contain mb-3"
+          alt="Product"
+        />
+        <span className="text-2xl font-bold">
+          {product.name.length > 20 ? `${product.title} ...` : product.name}
+        </span>
+        <hr className="mb-2" />
+        <p className="mb-2">
+          {product.description.length > 30
+            ? `${product.description} ...`
+            : product.description}
+        </p>
       </div>
-      {/* {<Link to={`/item/${product.id}`}> */}
-      <div style={{padding:'1rem'}}>
-        <li>{product.name}</li>
-        <li>{product.description}</li>
-        <button onClick={handleNavigate} className="btnDetail">Detalle</button>
-        {/*  </Link>} */}
-        <p className="stockParagrahp">Stock: {product.stock}</p>
-        <p className="productPrice"> ${product.price}</p>
+      <div className="flex flex-col">
+        <hr className="mb-2" />
+        <div className="flex justify-between items-center">
+          <span className="font-bold">${product.price}</span>
+          <span className="text-xs">
+            {quantityAdded ? "Agregados" : "En Stock"}:{" "}
+            {quantityAdded || product.stock}
+          </span>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 
 export default Item;

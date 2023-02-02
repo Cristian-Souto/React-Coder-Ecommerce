@@ -1,10 +1,10 @@
-import '../hoja-de-estilo/itemCountContainer.css'
 
 export const ItemCount = ({ count, handleCount }) => {
   return (
-    <div className="itemCountContainer">
+    <div className="flex mt-10 w-4/5 bg-gray-200 rounded">
       <button
         onClick={() => handleCount("disminuir")}
+        className="flex justify-center items-center p-2 w-2/5 h-full bg-gray-800 text-white"
       >
         -
       </button>
@@ -15,6 +15,7 @@ export const ItemCount = ({ count, handleCount }) => {
       </span>
       <button 
         onClick={() => handleCount("incrementar")}
+        className="flex justify-center items-center p-2 w-2/5 h-full bg-gray-800 text-white"
       >
         +
       </button>

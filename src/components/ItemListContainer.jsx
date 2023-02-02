@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
+import Loading from "./Loading";
 import { useParams } from "react-router-dom";
 import {
   getFirestore,
@@ -40,7 +41,7 @@ const ItemListContainer = () => {
   }, [category]);
 
   if (products.length === 0) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
   return (
     <div>
