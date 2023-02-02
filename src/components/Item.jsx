@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import Loading from "./Loading";
-import '../hoja-de-estilo/container-items.css'
 import { useGetItemImg } from "../hook/useGetItemImg";
 
 const Item = ({ product, quantityAdded }) => {
@@ -16,7 +15,7 @@ const Item = ({ product, quantityAdded }) => {
   return (
     <div
       onClick={handleNavigate}
-      className="flex flex-col w-[200px] h-[400px] bg-white rounded p-4 shadow cursor-pointer transition-all hover:shadow-lg"
+      className="flex flex-col w-[200px] h-[400px] bg-grey rounded p-4 shadow cursor-pointer transition-all hover:shadow-lg"
     >
       <div className="flex flex-col flex-1">
         <img

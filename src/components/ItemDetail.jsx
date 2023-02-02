@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import  Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
 import { useGetItemImg } from "../hook/useGetItemImg";
 import { ItemCount } from "./ItemCount";
@@ -43,37 +44,56 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    <div className="itemDetailContainer">
-      <div className="imageItem">
-        <img style={{ width: '50%', objectFit: 'contain' }} src={image} alt={item.name} />
-      </div>
-      <div className="detailItems">
-        <h2 className="item">{item.name}</h2>
-        <p className="item itemDescription">{item.description}</p>
-        <span className="itemStock">Stock: {item.stock}</span>
-        <span className="itemPrice">$ {item.price}</span>
-      </div>
-      <div style={{ width: '100%' }}>
-        {currentStock > 0 ? (
-          <ItemCount count={count} handleCount={handleCount} />
+    < div className="flex w-5/6 bg-white rounded p-10 transition-all shadow hover:shadow-lg" >
+      {/* Item image */}
+      < div className="flex justify-center w-1/2" >
+        {!image ? (
+          <Loading />
         ) : (
-          <p style={{color: 'red', fontWeight: '600', textAlign: 'center'}}>Sin stock</p>
-        )}
-      </div>
-      <div className="btnContainer">
-        <button className="btnAddItem"
-          onClick={handleAdd}
-          disabled={currentStock === 0}
-        >Agregar al carrito
-        </button>
-        <button className="btnCheckOut"
-          /* disabled={!isInCart(item.id)} */
-          onClick={handleCheckout}
-        >
-          Finalizar Compra
-        </button>
-      </div>
-    </div>
+          <img className="max-h-[500px] w-full object-contain" src={image} alt={item.name} />
+        )
+        }
+      </div >
+
+      {/* Item description */}
+      <div className="flex flex-col justify-center pl-10" >
+        <h2 className="text-3xl font-bold text-gray-800">{item.name}</h2>
+        <p className="mt-4 text-xl">{item.description}</p>
+        <span className="mt-4 text-xl">
+          Price: <strong className="text-gray-800">${item.price}</strong>
+        </span>
+        {
+          currentStock > 0 && (
+            <p className="text-sm">En Stock: {currentStock}</p>
+          )
+        }
+
+        <div className="flex flex-col flex-1 items-center">
+          {/* Count */}
+          {currentStock > 0 ? (
+            <ItemCount count={count} handleCount={handleCount} />
+          ) : (
+            <span className="text-red-500 mt-10">Sin stock</span>
+          )}
+          <div className="w-full flex flex-col items-center">
+            <button
+              onClick={handleAdd}
+              className="w-4/5 bg-gray-200 px-4 py-2 mt-2 rounded disabled:opacity-40"
+              disabled={currentStock === 0}
+            >
+              Agregar al carrito
+            </button>
+            <button
+              disabled={!isInCart(item.id)}
+              onClick={handleCheckout}
+              className="w-4/5 bg-gray-800 text-white px-4 py-2 mt-2 rounded disabled:opacity-50"
+            >
+              Finalizar Compra
+            </button>
+          </div>
+        </div>
+      </div >
+    </div >
   )
 }
 
