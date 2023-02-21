@@ -16,24 +16,24 @@ const CartView = () => {
 
   return (
     <Layout>
-      { <div style={{maxWidth:'90%',display:'flex',flexDirection:"column",justifyContent:'center',alignItems:'center',margin:'auto'}}>
+      { <div className="flex flex-col max-w-[50%]"  /* style={{maxWidth:'90%',display:'flex',flexDirection:"column",justifyContent:'center',alignItems:'center',margin:'auto'}} */>
        { items.length === 0 ? (
-          <div style={{display:'flex', flexDirection:'column',alignItems:'center',justifyContent:'center' }}>
-            <h1 style={{fontSize:'2rem'}}>No has agregado productos al carrito</h1>
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-2xl" >No has agregado productos al carrito</h1>
             <button
               onClick={() => navigate("/")}
-              style={{borderRadius:'8px',color:'white',fontWeight:'bolder',backgroundColor:'slategrey',padding:'1rem .8rem',marginTop:'2rem'}}
-            >
+              className="rounded-lg p-2 bg-gray-800 text-white mt-4"
+           >
               Ir al Inicio
             </button>
           </div>
         ) : (
-          <div style={{ width:'80%',padding:'2rem'}}>
-            <div style={{display:'flex',flexDirection:'column'}}>
+          <div className="flex p-2 gap-4" /* style={{ width:'80%',padding:'2rem'}} */>
+            <div /* style={{display:'flex',flexDirection:'column'}} */>
               {items.map((product) => {
                 const quantityAdded = product.quantityAdded
                 return (
-                  <div style={{position:'relative'}}>
+                  <div className="relative">
                     <Item
                       product={product.item}
                       quantityAdded={quantityAdded} 
@@ -43,20 +43,22 @@ const CartView = () => {
                 );
               })}
             </div>
-            <div style={{display:'flex',justifyContent:'flex-end',marginTop:'3rem'}}>
-              <div style={{display:'flex',flexDirection:'row'}}>
+            <div className="flex justify-end mt-4" /* style={{display:'flex',justifyContent:'flex-end',marginTop:'3rem'}} */>
+              <div className="flex flex-col" /* style={{display:'flex',flexDirection:'row'}} */>
                 <span>
                   Total a pagar: <strong>${importeTotal}</strong>
                 </span>
                 <button
                   onClick={goToCheckout}
-                  style={{borderRadius:'10px',color:'white',fontWeight:'bolder',backgroundColor:'darkslateblue',padding:'1rem .8rem',marginTop:'2rem',marginRight:'10px'}}
+/*                   style={{borderRadius:'10px',color:'white',fontWeight:'bolder',backgroundColor:'darkslateblue',padding:'1rem .8rem',marginTop:'2rem',marginRight:'10px'}}
+ */             className="rounded-lg p-2 mb-2 bg-gray-800 text-white"  
                 >
                   Ir al Checkout
                 </button>
                 <button
                   onClick={clear}
-                  style={{borderRadius:'10px',color:'white',fontWeight:'bolder',backgroundColor:'#DC0000',padding:'1rem .8rem',marginTop:'2rem'}}
+/*                   style={{borderRadius:'10px',color:'white',fontWeight:'bolder',backgroundColor:'#DC0000',padding:'1rem .8rem',marginTop:'2rem'}}
+ */             className="rounded-lg p-2 bg-gray-800 text-white" 
                 >
                 Vaciar carrito
                 </button>

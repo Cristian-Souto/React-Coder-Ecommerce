@@ -22,6 +22,7 @@ const Item = ({ product, quantityAdded }) => {
           src={image}
           className="w-full h-[100%] object-contain mb-3"
           alt="Product"
+          style={{mixBlendMode:'multiply'}}
         />
         <span className="text-2xl font-bold">
           {product.name.length > 20 ? `${product.title} ...` : product.name}

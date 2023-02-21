@@ -76,7 +76,7 @@ const CheckoutView = () => {
 
   return (
     <Layout>
-      <form onSubmit={handleFinalizePurchase} style={{backgroundColor:'#DBD8E3',borderRadius:'8px',boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px',margin:'auto',maxWidth:'50%',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',height:'80vh'}} >
+     {/*  <form onSubmit={handleFinalizePurchase} style={{backgroundColor:'#DBD8E3',borderRadius:'8px',boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px',margin:'auto',maxWidth:'50%',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',height:'80vh'}} >
         <h2 style={{margin:'1rem 0',fontSize:'2.2rem'}}>Formulario de compra</h2>
         <div style={{display:'flex',flexDirection:'column'}}>
           <input
@@ -108,6 +108,38 @@ const CheckoutView = () => {
           type="submit"
           className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50"
           disabled={isLoading}
+        >
+          Finalizar
+        </button>
+      </form> */}
+       <form onSubmit={handleFinalizePurchase} className="flex flex-col w-1/2 max-w-md shadow">
+       <h2 className="text-4xl mb-6 text-center">Formulario de compra</h2>
+        <div className="flex flex-col ">
+          <input
+            className="h-8 pl-4 mb-4 rounded-md"
+            placeholder="Nombre Completo"
+            required
+          />
+          <input
+            className="h-8 pl-4 mb-4 rounded-md"
+            placeholder="Numero de Telefono"
+            type="number"
+            required
+          />
+          <input
+            className="h-8 pl-4 mb-4 rounded-md"
+            placeholder="Email"
+            type={"email"}
+            required
+          />
+        </div>
+        <span className="mb-4">
+          Total a pagar: <strong>${importeTotal}</strong>
+        </span>
+        <button
+          type="submit"
+          className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50"
+          disabled={isLoading} 
         >
           Finalizar
         </button>
