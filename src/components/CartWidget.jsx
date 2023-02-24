@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <div className="inset-y-0 relative right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
       <Link to="/cart">
-        <button className="relative">
+        <button className="relative p-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -27,7 +27,7 @@ const CartWidget = () => {
           </svg>
         </button>
         {count > 0 && (
-          <span className="absolute w-4 h-4 bottom-0 left-0- right-2 rounded-full flex justify-center items-center bg-white/70">
+          <span className="w-6 h-6 px-2 rounded-full bg-black text-white ">
             {count}
           </span>
         )}
