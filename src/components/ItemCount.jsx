@@ -10,6 +10,7 @@ export const ItemCount = ({ count, handleCount }) => {
       </button>
       <span
         id="counter"
+        className="flex flex-1 justify-center items-center mx-4 font-bold"
       >
         {count}
       </span>

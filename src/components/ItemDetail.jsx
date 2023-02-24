@@ -78,7 +78,7 @@ const ItemDetail = ({ item }) => {
           <div className="w-full flex flex-col items-center">
             <button
               onClick={handleAdd}
-              className="w-4/5 bg-gray-200 px-4 py-2 mt-2 rounded disabled:opacity-40"
+              className="w-4/5 bg-gray-200 px-4 py-2 mt-2 rounded disabled:opacity-40 hover:bg-gray-600 duration-500 hover:text-white"
               disabled={currentStock === 0}
             >
               Agregar al carrito

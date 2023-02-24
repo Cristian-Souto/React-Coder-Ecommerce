@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
-
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,13 +15,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="hidden md:block">
             <div className="ml-2 flex items-center">
-              <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              <Link to="/" className="px-3 py-2 rounded-md text-lg font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
                 Home
               </Link>
-              <Link to="/category/keyboard" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              <Link to="/category/keyboard" 
+                className="ml-4 px-3 py-2 rounded-md text-lg font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
                 Teclados
               </Link>
-              <Link to="/category/mouse" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              <Link to="/category/mouse" 
+                className="ml-4 px-3 py-2 rounded-md text-lg font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
                 Mouses
               </Link>
             </div>
