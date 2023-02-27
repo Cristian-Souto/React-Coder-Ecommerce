@@ -112,9 +112,9 @@ const CheckoutView = () => {
           Finalizar
         </button>
       </form> */}
-       <form onSubmit={handleFinalizePurchase} className="flex flex-col w-1/2 max-w-md shadow">
-       <h2 className="text-4xl mb-6 text-center">Formulario de compra</h2>
-        <div className="flex flex-col ">
+       <form onSubmit={handleFinalizePurchase} className="flex flex-col justify-around w-10/12 p-3 min-h-screen max-w-md shadow">
+       <h2 className="text-3xl mb-6 text-center">Formulario de compra</h2>
+        <div className="flex flex-col">
           <input
             className="h-8 pl-4 mb-4 rounded-md"
             placeholder="Nombre Completo"
