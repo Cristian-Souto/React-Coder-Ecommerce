@@ -44,9 +44,9 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    < div className="flex w-5/6 bg-white rounded p-10 transition-all shadow hover:shadow-lg" >
+    < div className="flex w-5/6 bg-white rounded p-10 transition-all shadow hover:shadow-lg sm:flex flex-col align-center" >
       {/* Item image */}
-      < div className="flex justify-center w-1/2" >
+      < div className="flex justify-center w-full" >
         {!image ? (
           <Loading />
         ) : (
@@ -56,7 +56,7 @@ const ItemDetail = ({ item }) => {
       </div >
 
       {/* Item description */}
-      <div className="flex flex-col justify-center pl-10" >
+      <div className="flex flex-col justify-center" >
         <h2 className="text-3xl font-bold text-gray-800">{item.name}</h2>
         <p className="mt-4 text-xl">{item.description}</p>
         <span className="mt-4 text-xl">
