@@ -6,13 +6,13 @@ export const TrashWidget = ({ itemId }) => {
   return (
     <button
       onClick={() => removeItem(itemId)}
-     className="absolute flex justify-center items-center -top-2 -right-2 w-8 h-8 bg-red-200 rounded-full"
+     className="absolute flex justify-center items-center -top-2 -right-2 w-8 h-8 bg-black rounded-full"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-6 h-6 text-red-600"
+        className="w-6 h-6 text-white"
       >
         <path
           fill-rule="evenodd"
