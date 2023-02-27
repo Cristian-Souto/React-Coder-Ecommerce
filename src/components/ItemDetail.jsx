@@ -44,13 +44,13 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    < div className="flex w-5/6 bg-white rounded p-10 transition-all shadow hover:shadow-lg sm:flex flex-col align-center" >
+    < div className="md:flex w-5/6 bg-white rounded p-10 transition-all shadow hover:shadow-lg " >
       {/* Item image */}
-      < div className="flex justify-center w-full" >
+      < div className="flex justify-center w-full sm:flex flex-col align-center" >
         {!image ? (
           <Loading />
         ) : (
-          <img className="max-h-[500px] w-full object-contain" src={image} alt={item.name} />
+          <img className="max-h-[400px] w-full object-contain" src={image} alt={item.name} />
         )
         }
       </div >
