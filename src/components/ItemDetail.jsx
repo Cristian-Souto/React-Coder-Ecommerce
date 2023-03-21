@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import  Loading from "./Loading";
+import Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
 import { useGetItemImg } from "../hook/useGetItemImg";
 import { ItemCount } from "./ItemCount";

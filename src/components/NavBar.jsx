@@ -18,18 +18,18 @@ const Navbar = () => {
               <Link to="/" className="px-3 py-2 rounded-md text-lg font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
                 Home
               </Link>
-              <Link to="/category/keyboard" 
+              <Link to="/category/keyboard"
                 className="ml-4 px-3 py-2 rounded-md text-lg font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
                 Teclados
               </Link>
-              <Link to="/category/mouse" 
+              <Link to="/category/mouse"
                 className="ml-4 px-3 py-2 rounded-md text-lg font-medium text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
                 Mouses
               </Link>
             </div>
           </div>
           <div className="md:hidden">
-          {/*Button menu hamburguesa*/}
+            {/*Button menu hamburguesa*/}
             <button
               type="button"
               onClick={handleMenuToggle}

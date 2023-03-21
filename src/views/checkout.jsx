@@ -110,6 +110,6 @@ const CheckoutView = () => {
       </form>
     </Layout>
   );
-};
+}
 
 export default CheckoutView;
