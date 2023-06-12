@@ -76,9 +76,9 @@ const CheckoutView = () => {
 
   return (
     <Layout>
-      <form onSubmit={handleFinalizePurchase} className="flex flex-col justify-around w-10/12 p-3 min-h-screen max-w-lg shadow bg-gray-600 rounded-md ">
-        <h2 className="text-4xl mb-6 text-center">Datos de compras</h2>
-        <div className="flex flex-col">
+      <form onSubmit={handleFinalizePurchase} className="flex flex-col justify-around w-10/12 p-3 max-w-lg shadow rounded-md ">
+        <h2 className="text-4xl mb-6 text-center">Datos del comprador</h2>
+        <div className="flex flex-col h-50">
           <input
             className="h-10 pl-4 mb-6 rounded-md"
             placeholder="Nombre Completo"
@@ -100,13 +100,15 @@ const CheckoutView = () => {
         <span className="mb-4">
           Total a pagar: <strong>${importeTotal}</strong>
         </span>
-        <button
-          type="submit"
-          className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50 w-36"
-          disabled={isLoading}
-        >
-          Finalizar
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50 w-36"
+            disabled={isLoading}
+          >
+            Finalizar
+          </button>
+        </div>
       </form>
     </Layout>
   );
