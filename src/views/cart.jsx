@@ -51,7 +51,7 @@ const CartView = () => {
                 onClick={goToCheckout}
                 className="rounded-lg py-2 px-4 mb-2 bg-gray-800 text-white"
               >
-                Ir al Checkout
+                Comprar
               </button>
               <button
                 onClick={clear}
